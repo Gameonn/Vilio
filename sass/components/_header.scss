@@ -3,6 +3,8 @@
   margin-left: 2rem;
 }
 
+// Header Search & User nav
+
 .search {
   flex: 0 0 40%;
 
@@ -16,7 +18,7 @@
     background-color: var(--color-grey-light-2);
     border: none;
     padding: 0.7rem 2rem;
-    border-radius: 6rem;
+    border-radius: 7rem;
     width: 90%;
     transition: all 0.2s ease;
     margin: -3.25rem;
@@ -40,6 +42,8 @@
   &__button {
     border: none;
     background-color: var(--color-grey-light-2);
+    width: 20px;
+    display: flex;
     &:focus {
       outline: none;
     }
@@ -61,7 +65,7 @@
 
   & > * {
     padding: 0 2rem;
-    pointer: cursor;
+    cursor: pointer;
     height: 100%;
     display: flex;
     align-items: center;
@@ -75,8 +79,8 @@
   }
 
   &__icon {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 2.2rem;
+    width: 2.2rem;
     fill: var(--color-grey-dark-2);
   }
   &__user-photo {
