@@ -1,6 +1,9 @@
 .testimonial {
   & .description__container {
     display: flex;
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+    }
   }
   & .paragraph {
     &:not(:last-of-type) {
@@ -17,6 +20,10 @@
 
     display: flex;
     flex-wrap: wrap;
+
+    @media only screen and (max-width: $bp-large) {
+      flex-direction: column;
+    }
 
     &__item {
       flex: 0 0 50%;
@@ -78,6 +85,11 @@
     position: relative;
     overflow: hidden;
 
+    @media only screen and (max-width: $bp-medium) {
+      padding: 2rem;
+      margin-bottom: 3rem;
+    }
+
     &__text {
       margin-bottom: 2rem;
       z-index: 10;
@@ -130,6 +142,9 @@
     text-align: center;
     background-color: #fff;
     margin: 2.5rem -4.5rem -4.5rem -4.5rem;
+    @media only screen and (max-width: $bp-medium) {
+      padding: 2.5rem 0;
+    }
 
     &__book-now {
       font-size: 2rem;
@@ -162,12 +177,12 @@
       }
 
       &__visible {
-        padding: 2rem 7.5rem;
+        padding: 1.5rem 7.5rem;
       }
 
       &__invisible {
         position: absolute;
-        padding: 2rem 0;
+        padding: 1.5rem 0;
         left: 0;
         top: -100%;
       }

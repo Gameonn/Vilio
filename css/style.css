@@ -35,6 +35,9 @@ Primary dark: #BA265D
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -52,6 +55,11 @@ body {
   background-color: var(--color-grey-light-2);
   box-shadow: var(--shadow-dark);
   min-height: 50rem; }
+  @media only screen and (max-width: 75em) {
+    .container {
+      margin: 0;
+      max-width: 100%;
+      width: 100%; } }
 
 .header {
   font-size: 1.4rem;
@@ -64,6 +72,9 @@ body {
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
@@ -87,6 +98,9 @@ body {
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line); }
+  @media only screen and (max-width: 56.25em) {
+    .testimonial {
+      padding: 3rem; } }
 
 .description {
   flex: 0 0 60%;
@@ -94,6 +108,14 @@ body {
   padding: 3rem;
   background: #fff;
   box-shadow: var(--shadow-light); }
+  @media only screen and (max-width: 56.25em) {
+    .description {
+      padding: 2rem;
+      margin-right: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .description {
+      margin-right: 0;
+      margin-bottom: 3rem; } }
 
 .user-reviews {
   flex: 1;
@@ -185,6 +207,10 @@ body {
   font-size: 1.4rem;
   list-style: none;
   margin-top: 3.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .side-nav {
+      display: flex;
+      margin: 0; } }
   .side-nav__item {
     position: relative; }
     .side-nav__item::before {
@@ -200,6 +226,12 @@ body {
       transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
     .side-nav__item:not(:last-child) {
       margin-bottom: 0.5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .side-nav__item:not(:last-child) {
+          margin: 0; } }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__item {
+        flex: 1; } }
     .side-nav__item:hover::before, .side-nav__item--active:before {
       transform: scaleY(1);
       width: 100%; }
@@ -214,17 +246,34 @@ body {
     align-items: center;
     position: relative;
     z-index: 10; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        justify-content: center;
+        padding: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        flex-direction: column;
+        padding: 1.5rem 0.5rem; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__icon {
+        margin-right: 0;
+        margin-bottom: 0.7rem;
+        width: 1.5rem;
+        height: 1.5rem; } }
 
 .legal {
   font-size: 1.2rem;
   color: var(--color-light-grey-3);
   text-align: center;
   padding: 2.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      display: none; } }
 
 .overview {
   display: flex;
@@ -301,6 +350,9 @@ body {
 
 .testimonial .description__container {
   display: flex; }
+  @media only screen and (max-width: 37.5em) {
+    .testimonial .description__container {
+      flex-direction: column; } }
 
 .testimonial .paragraph:not(:last-of-type) {
   margin-bottom: 2rem; }
@@ -313,6 +365,9 @@ body {
   border-bottom: var(--line);
   display: flex;
   flex-wrap: wrap; }
+  @media only screen and (max-width: 68.75em) {
+    .testimonial .list {
+      flex-direction: column; } }
   .testimonial .list__item {
     flex: 0 0 50%;
     margin-bottom: 0.7rem; }
@@ -353,6 +408,10 @@ body {
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden; }
+  @media only screen and (max-width: 56.25em) {
+    .testimonial .review {
+      padding: 2rem;
+      margin-bottom: 3rem; } }
   .testimonial .review__text {
     margin-bottom: 2rem;
     z-index: 10;
@@ -394,6 +453,9 @@ body {
   text-align: center;
   background-color: #fff;
   margin: 2.5rem -4.5rem -4.5rem -4.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .testimonial .cta {
+      padding: 2.5rem 0; } }
   .testimonial .cta__book-now {
     font-size: 2rem;
     font-weight: 300;
@@ -416,10 +478,10 @@ body {
       width: 100%;
       transition: all 0.4s; }
     .testimonial .cta .btn__visible {
-      padding: 2rem 7.5rem; }
+      padding: 1.5rem 7.5rem; }
     .testimonial .cta .btn__invisible {
       position: absolute;
-      padding: 2rem 0;
+      padding: 1.5rem 0;
       left: 0;
       top: -100%; }
     .testimonial .cta .btn:hover {
