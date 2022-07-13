@@ -1,6 +1,9 @@
 .testimonial {
   & .description__container {
     display: flex;
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+    }
   }
   & .paragraph {
     &:not(:last-of-type) {
@@ -18,6 +21,10 @@
     display: flex;
     flex-wrap: wrap;
 
+    @media only screen and (max-width: $bp-large) {
+      // flex-direction: column;
+    }
+
     &__item {
       flex: 0 0 50%;
       margin-bottom: 0.7rem;
@@ -29,15 +36,18 @@
         margin-right: 0.7rem;
 
         //older browsers
-        // background-image: url("/img/chevron-thin-right.svg");
-        // background-size: cover;
+        background-image: url("/img/chevron-thin-right.svg");
+        background-size: cover;
 
         //Newer browsers
-        background-color: var(--color-primary);
-        mask-image: url("/img/chevron-thin-right.svg");
-        mask-size: cover;
-        -webkit-mask-image: url("/img/chevron-thin-right.svg");
-        -webkit-mask-size: cover;
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+          background-color: var(--color-primary);
+          mask-image: url("/img/chevron-thin-right.svg");
+          mask-size: cover;
+          -webkit-mask-image: url("/img/chevron-thin-right.svg");
+          -webkit-mask-size: cover;
+          background-image: none;
+        }
       }
     }
   }
@@ -77,6 +87,11 @@
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 2rem;
+      margin-bottom: 3rem;
+    }
 
     &__text {
       margin-bottom: 2rem;
@@ -130,6 +145,9 @@
     text-align: center;
     background-color: #fff;
     margin: 2.5rem -4.5rem -4.5rem -4.5rem;
+    @media only screen and (max-width: $bp-medium) {
+      padding: 2.5rem 0;
+    }
 
     &__book-now {
       font-size: 2rem;
@@ -162,12 +180,12 @@
       }
 
       &__visible {
-        padding: 2rem 7.5rem;
+        padding: 1.5rem 7.5rem;
       }
 
       &__invisible {
         position: absolute;
-        padding: 2rem 0;
+        padding: 1.5rem 0;
         left: 0;
         top: -100%;
       }
