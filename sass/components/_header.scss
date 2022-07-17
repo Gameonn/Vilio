@@ -3,7 +3,7 @@
   margin-left: 2rem;
 }
 
-// Header Search & User nav
+// Header Search
 
 .search {
   flex: 0 0 40%;
@@ -22,7 +22,7 @@
     background-color: var(--color-grey-light-2);
     border: none;
     padding: 0.7rem 2rem;
-    border-radius: 7rem;
+    border-radius: var(--border-radius-big);
     width: 90%;
     transition: all 0.2s ease;
     margin: -3.25rem;
@@ -62,6 +62,8 @@
   }
 }
 
+// Header User Nav
+
 .user-nav {
   align-self: stretch;
   display: flex;
@@ -89,16 +91,16 @@
   }
   &__user-photo {
     height: 4rem;
-    border-radius: 50%;
+    border-radius: var(--border-radius-circle);
     margin-right: 1rem;
   }
   &__notification {
     font-size: 0.8rem;
     height: 1.75rem;
     width: 1.75rem;
-    border-radius: 60px;
+    border-radius: var(--border-radius-big);
     background-color: var(--color-primary);
-    color: #fff;
+    color: var(--color-white);
     position: absolute;
     top: 1.5rem;
     right: 1.1rem;

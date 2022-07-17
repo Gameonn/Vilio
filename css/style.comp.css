@@ -1,13 +1,3 @@
-/*
-COLORS
-
-Primary: #eb2f64
-Primary light: #FF3366
-Primary dark: #BA265D
-
-
-
-*/
 :root {
   --color-primary: #eb2f64;
   --color-primary-light: #ff3366;
@@ -19,9 +9,12 @@ Primary dark: #BA265D
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
+  --color-white: #fff;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.08);
-  --line: 1px solid var(--color-grey-light-2); }
+  --line: 1px solid var(--color-grey-light-2);
+  --border-radius-circle: 50%;
+  --border-radius-big: 7rem; }
 
 * {
   margin: 0;
@@ -64,7 +57,7 @@ body {
 .header {
   font-size: 1.4rem;
   height: 7rem;
-  background-color: #fff;
+  background-color: var(--color-white);
   border-bottom: var(--line);
   display: flex;
   justify-content: space-between;
@@ -89,7 +82,7 @@ body {
   justify-content: space-between; }
 
 .hotel-view {
-  background-color: #fff;
+  background-color: var(--color-white);
   flex: 1; }
 
 .gallery {
@@ -111,7 +104,7 @@ body {
   flex: 0 0 60%;
   margin-right: 4.5rem;
   padding: 3rem;
-  background: #fff;
+  background: var(--color-white);
   box-shadow: var(--shadow-light); }
   @media only screen and (max-width: 56.25em) {
     .description {
@@ -149,7 +142,7 @@ body {
     background-color: var(--color-grey-light-2);
     border: none;
     padding: 0.7rem 2rem;
-    border-radius: 7rem;
+    border-radius: var(--border-radius-big);
     width: 90%;
     transition: all 0.2s ease;
     margin: -3.25rem; }
@@ -196,15 +189,15 @@ body {
     fill: var(--color-grey-dark-2); }
   .user-nav__user-photo {
     height: 4rem;
-    border-radius: 50%;
+    border-radius: var(--border-radius-circle);
     margin-right: 1rem; }
   .user-nav__notification {
     font-size: 0.8rem;
     height: 1.75rem;
     width: 1.75rem;
-    border-radius: 60px;
+    border-radius: var(--border-radius-big);
     background-color: var(--color-primary);
-    color: #fff;
+    color: var(--color-white);
     position: absolute;
     top: 1.5rem;
     right: 1.1rem;
@@ -313,7 +306,7 @@ body {
     margin-right: 0.5rem; }
   .overview__rating {
     background-color: var(--color-primary);
-    color: #fff;
+    color: var(--color-white);
     margin-left: 3rem;
     align-self: stretch;
     padding: 0 2.25rem;
@@ -420,13 +413,13 @@ body {
     box-sizing: content-box;
     height: 4rem;
     width: 4rem;
-    border-radius: 50%;
-    border: 3px solid #fff; }
+    border-radius: var(--border-radius-circle);
+    border: 3px solid var(--color-white); }
     .testimonial .recommend__photo:not(:last-child) {
       margin-right: -1.5rem; }
 
 .testimonial .review {
-  background: #fff;
+  background: var(--color-white);
   box-shadow: var(--shadow-light);
   padding: 3rem;
   margin-bottom: 3.5rem;
@@ -456,7 +449,7 @@ body {
   .testimonial .review__photo {
     height: 4.5rem;
     width: 4.5rem;
-    border-radius: 50%;
+    border-radius: var(--border-radius-circle);
     margin-right: 1.5rem; }
   .testimonial .review__rating {
     font-size: 2.2rem;
@@ -475,7 +468,7 @@ body {
 .testimonial .cta {
   padding: 3.5rem 0;
   text-align: center;
-  background-color: #fff;
+  background-color: var(--color-white);
   margin: 2.5rem -4.5rem -4.5rem -4.5rem; }
   @media only screen and (max-width: 56.25em) {
     .testimonial .cta {
@@ -489,10 +482,10 @@ body {
     font-size: 1.5rem;
     font-weight: 300;
     text-transform: uppercase;
-    border-radius: 100px;
+    border-radius: var(--border-radius-big);
     border: none;
     background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
-    color: #fff;
+    color: var(--color-white);
     position: relative;
     overflow: hidden;
     cursor: pointer; }
