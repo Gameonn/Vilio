@@ -147,7 +147,6 @@ body {
     font-family: inherit;
     font-size: inherit;
     background-color: var(--color-grey-light-2);
-    background-color: var(--color-grey-light-2);
     border: none;
     padding: 0.7rem 2rem;
     border-radius: 7rem;
@@ -397,14 +396,14 @@ body {
       height: 1rem;
       width: 1rem;
       margin-right: 0.7rem;
-      background-image: url("/img/chevron-thin-right.svg");
+      background-image: url("../img/chevron-thin-right.svg");
       background-size: cover; }
       @supports (-webkit-mask-image: url()) or (mask-image: url()) {
         .testimonial .list__item::before {
           background-color: var(--color-primary);
-          mask-image: url("/img/chevron-thin-right.svg");
+          mask-image: url("../img/chevron-thin-right.svg");
           mask-size: cover;
-          -webkit-mask-image: url("/img/chevron-thin-right.svg");
+          -webkit-mask-image: url("../img/chevron-thin-right.svg");
           -webkit-mask-size: cover;
           background-image: none; } }
 
