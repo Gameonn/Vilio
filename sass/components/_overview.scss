@@ -20,8 +20,8 @@
   }
   &__icon-star,
   &__icon-location {
-    width: 1.75rem;
-    height: 1.75rem;
+    width: var(--small-icon);
+    height: var(--small-icon);
     fill: var(--color-primary);
   }
   &__location {

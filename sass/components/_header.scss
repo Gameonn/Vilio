@@ -96,8 +96,8 @@
   }
   &__notification {
     font-size: 0.8rem;
-    height: 1.75rem;
-    width: 1.75rem;
+    height: var(--small-icon);
+    width: var(--small-icon);
     border-radius: var(--border-radius-big);
     background-color: var(--color-primary);
     color: var(--color-white);
